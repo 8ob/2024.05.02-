@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<! DOCTYPE html>
+<html>
+    <head>
+    <title>顯示資料需包含 NetBankUsers 與 Accounts 資料欄位</title>
+    </head>
+    <body>
+    <h1>顯示資料需包含 NetBankUsers 與 Accounts 資料欄位</h1>
+        <table border="1">
+            <tr>
+            <th>NationalID</th>
+            <th>BranchID</th>
+            <th>AcctSerialID</th>
+            </tr>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.NationalID</td>
+                <td>@user.BranchID</td>
+                <td>@user.AcctSerialID</td>
+            </tr>
+        }
+        </table>
+    </body>
+
+</html>
